@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "data" : [
+    {
+      "paragraphs": {
+        "context": "paragraph with related information",
+        "qas" : [
+          {
+            "question": "What is it?",
+            "answers": [
+              "It is an sample"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
