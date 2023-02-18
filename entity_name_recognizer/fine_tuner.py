@@ -85,3 +85,11 @@ val_dataset = WNUTDataset(val_encodings, val_labels)
 
 from transformers import DistilBertForTokenClassification
 model = DistilBertForTokenClassification.from_pretrained('distilbert-base-cased', num_labels=len(unique_tags))
+
+# Saved
+import os
+from datetime import datetime
+folder_path = "../saved_models/entity_name_recognizer/fine_tuned_at_" + datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+os.makedirs(folder_path)
+model.save_pretrained(folder_path)
+tokenizer.save_pretrained(folder_path)

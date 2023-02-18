@@ -1,5 +1,4 @@
 # Credit to: https://huggingface.co/transformers/v3.3.1/custom_datasets.html
-
 import json
 from pathlib import Path
 
@@ -120,3 +119,11 @@ for epoch in range(3):
         optim.step()
 
 model.eval()
+
+# Saved
+import os
+from datetime import datetime
+folder_path = "../saved_models/question_answer/fine_tuned_at_" + datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+os.makedirs(folder_path)
+model.save_pretrained(folder_path)
+tokenizer.save_pretrained(folder_path)
