@@ -27,7 +27,7 @@ Original file is located at
 #@markdown You need to accept the model license before downloading or using the Stable Diffusion weights. Please, visit the [model card](https://huggingface.co/runwayml/stable-diffusion-v1-5), read the license and tick the checkbox if you agree. You have to be a registered user in 🤗 Hugging Face Hub, and you'll also need to use an access token for the code to work.
 # https://huggingface.co/settings/tokens
 !mkdir -p ~/.huggingface
-HUGGINGFACE_TOKEN = "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" #@param {type:"string"}
+HUGGINGFACE_TOKEN = "...." #@param {type:"string"}
 !echo -n "{HUGGINGFACE_TOKEN}" > ~/.huggingface/token
 
 """## Settings and run"""
